@@ -1,7 +1,7 @@
 .header {
     padding: 20px 0;
     background: #fff;
-    border-top: 5px solid rgb(163, 113, 72);
+    border-top: 3px solid #995f35;
 }
 
 .header .inner {
@@ -29,14 +29,14 @@
 
 .header .nav>ul>li .lnb {
     position: absolute;
-    top: 50px;
-    left: -20px;
+    top: 40px;
+    left: -60px;
     transform: translate(0, 0);
     z-index: 999;
     background: #fff;
-    border: 2px solid rgb(163, 113, 72);
-    border-radius: 20px;
-    padding: 20px;
+    border: 3px solid #995f35;
+    border-radius: 110px 110px 75px 75px;
+    padding: 100px 30px 50px 30px;
 
     opacity: 0;
     visibility: hidden;
@@ -50,25 +50,39 @@
 .header .nav>ul>li .lnb>li {
     width: 150px;
     white-space: nowrap;
+    background: #ee7421;
+    text-align: center;
+}
+
+.header .nav>ul>li .lnb>li:first-child{
+    border-radius: 10px 10px 0 0;
+    padding: 20px 0 0 0;
+}
+
+.header .nav>ul>li .lnb>li:last-child {
+    border-radius: 0 0 10px 10px;
+    padding: 0 0 20px 0;
 }
 
 .header .nav>ul>li .lnb>li>a {
     font-size: 14px;
     font-weight: 400;
-    color: #222;
-    line-height: 24px;
+    color: #fff;
+    line-height: 26px;
 }
 
 .main_egg {
-
+    /* background: #ee7421; */
 }
 
 .main_egg .e_slide {
-
+    gap: 20px;
 }
 
 .main_egg .e_slide .itm {
     height: calc(100vh - 400px);
+    margin: 0 30px;
+    border-radius: 25px;
 }
 
 .main_egg .e_slide .itm01 {
@@ -76,9 +90,10 @@
 }
 
 .main_egg .e_slide .itm02 {
-    background: url(../imges/mv02.png)no-repeat left top /cover;
+    background: url(../imges/mv02.png)no-repeat left bottom /cover;
 }
 
 .main_egg .e_slide .itm03 {
     background: url(../imges/mv03.png)no-repeat center center/cover;
 }
+
