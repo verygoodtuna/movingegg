@@ -1,24 +1,47 @@
+#circularCursor {
+    height: 100px;
+    width: 100px;
+    background: url(../imges/negg02.png)no-repeat center center/cover;
+    position: absolute;
+    z-index: 999;
+}
+
+html {
+    cursor: none;
+}
+
 .header {
-    padding: 20px 0;
+
     background: #fff;
     border-top: 3px solid #995f35;
 }
 
 .header .inner {
+    height: 100px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 50px;
 }
 
-.header .nav>ul {
+.header .nav {
     display: flex;
     justify-content: center;
+    align-items: center;
+}
+
+.header .nav>ul {
+    display: flex;
     gap: 75px;
+    height: 100px;
 }
 
 .header .nav>ul>li {
     position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
 }
 
 .header .nav>ul>li>a {
@@ -29,7 +52,7 @@
 
 .header .nav>ul>li .lnb {
     position: absolute;
-    top: 40px;
+    top: 70px;
     left: -60px;
     transform: translate(0, 0);
     z-index: 999;
@@ -50,7 +73,7 @@
 .header .nav>ul>li .lnb>li {
     width: 150px;
     white-space: nowrap;
-    background: #ee7421;
+    background: #f7b83d;
     text-align: center;
 }
 
@@ -73,6 +96,7 @@
 
 .main_egg {
     /* background: #ee7421; */
+    position: relative;
 }
 
 .main_egg .e_slide {
@@ -80,7 +104,7 @@
 }
 
 .main_egg .e_slide .itm {
-    height: calc(100vh - 400px);
+    height: calc(100vh - 300px);
     margin: 0 30px;
     border-radius: 25px;
 }
@@ -97,3 +121,197 @@
     background: url(../imges/mv03.png)no-repeat center center/cover;
 }
 
+.main_egg .slide_btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 999;
+   
+    display: flex;
+    justify-content: space-between;
+    max-width: 1560px;
+    width: 100%;
+    /* padding: 0 15px; */
+}
+
+.main_egg .slide_btn .egg {
+    width: 100px;
+    height: 100px;
+}
+
+.main_egg .slide_btn .egg_l {
+    background: url(../imges/negg01.png)no-repeat center center/cover;
+    transform: scaleX(-1);
+    position: relative;
+    transition: 0.3s;
+}
+
+.main_egg .slide_btn .egg_l::before {
+    content: "\e93e";
+    position: absolute;
+    top: 52%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: xeicon;
+    font-size: 24px;
+    font-weight: 700;
+    color: #fff;
+}
+
+.main_egg .slide_btn .egg_l:hover {
+    background: url(../imges/negg02.png)no-repeat center center/cover;
+}
+
+.main_egg .slide_btn .egg_l:hover::before {
+    color: transparent;
+}
+
+.main_egg .slide_btn .egg_r {
+    background: url(../imges/negg01.png)no-repeat center center/cover;
+    position: relative;
+    transition: 0.3s;
+}
+
+.main_egg .slide_btn .egg_r::before {
+    content: "\e93e";
+    position: absolute;
+    top: 52%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: xeicon;
+    font-size: 24px;
+    font-weight: 700;
+    color: #fff;
+}
+
+.main_egg .slide_btn .egg_r:hover {
+    background: url(../imges/negg02.png)no-repeat center center/cover;
+}
+
+.main_egg .slide_btn .egg_r:hover::before {
+    color: transparent;
+}
+
+.main_imformation .i_img {
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+}
+
+.main_recipe {
+    padding: 100px 0;
+}
+
+.main_recipe .inner {
+    display: flex;
+    justify-content: center;
+    min-height: 370px;
+}
+
+.main_recipe .left {
+    width: 385px;
+    background: #f7b83d;
+    border-radius: 50px 0 0 50px;
+
+    position: relative;
+}
+
+.main_recipe .left .tit {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.main_recipe .left .tit h3 {
+    font-size: 40px;
+    font-weight: 700;
+    color: #fff;
+    white-space: nowrap;
+    margin: 0 0 10px 0;
+}
+
+.main_recipe .left .tit p {
+    font-size: 16px;
+    font-weight: 300;
+    color: #fff;
+    text-align: center;
+}
+
+.main_recipe .right {
+    position: relative;
+    width: 785px;
+    border: 2px solid #f7b83d;
+    border-radius: 0 50px 50px 0;
+    background: #f9f9f9;
+}
+
+.main_recipe .right .r_img img {
+    width: 300px;
+    height: 380px;
+    text-align: center;
+    padding: 50px 0;
+    margin: 0 0 0 50px;
+}
+
+.main_recipe .right .r_img .txt {
+    position: absolute;
+    top: 50%;
+    left: 70%;
+    transform: translate(-50%, -50%);
+
+    display: flex;
+    flex-direction: column;
+}
+
+.main_recipe .right .r_img .txt span {
+    font-size: 20px;
+    font-weight: 400;
+    color: #f7b83d;
+    margin: 0 0 5px 0;
+}
+
+.main_recipe .right .r_img .txt strong {
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 46px;
+    margin: 0 0 100px 0;
+    white-space: nowrap;
+    color: #222;
+}
+
+.main_recipe .right .r_img .txt small {
+    font-size: 14px;
+    font-weight: 400;
+    color: #a8a8a8;
+    margin: 0 0 0 auto;
+    border: 1px solid #a8a8a8;
+    padding: 10px 20px;
+    border-radius: 25px;
+}
+
+.main_recipe .right .r_btn {
+    position: absolute;
+    top: 70%;
+    left: 53%;
+    transform: translate(0, 0);
+
+    display: flex;
+    gap: 10px;
+}
+
+.main_recipe .right .r_btn::before {
+    content: "";
+    position: absolute;
+    left: 49%;
+    background: #ddd;
+    height: 15px;
+    width: 2px;
+}
+
+.main_recipe .right .r_btn i {
+    font-size: 16px;
+    font-weight: 300;
+    color: #222;
+}
