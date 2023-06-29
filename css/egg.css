@@ -1,19 +1,7 @@
-#circularCursor {
-    height: 100px;
-    width: 100px;
-    background: url(../imges/negg02.png)no-repeat center center/cover;
-    position: absolute;
-    z-index: 999;
-}
-
-html {
-    cursor: none;
-}
-
 .header {
 
     background: #fff;
-    border-top: 3px solid #995f35;
+    border-top: 5px solid #995f35;
 }
 
 .header .inner {
@@ -97,6 +85,7 @@ html {
 .main_egg {
     /* background: #ee7421; */
     position: relative;
+    background: linear-gradient(to top, #f7b83d 50%, #fff 50%);
 }
 
 .main_egg .e_slide {
@@ -193,10 +182,36 @@ html {
     color: transparent;
 }
 
+.main_imformation {
+    padding: 100px 0;
+    background: #f7b83d;
+}
+
+.main_imformation .inner {
+    display: flex;
+    gap: 30px;
+}
+
 .main_imformation .i_img {
-    width: 200px;
-    height: 200px;
-    overflow: hidden;
+    width: 100%;
+    position: relative;
+}
+
+.main_imformation .i_img img {
+    border-radius: 25px;
+}
+
+.main_imformation .i_img span {
+    font-size: 24px;
+    font-weight: 700;
+    color: #fff;
+    text-shadow: 0 0 5px #afafaf;
+    white-space: nowrap;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .main_recipe {
@@ -244,7 +259,7 @@ html {
     width: 785px;
     border: 2px solid #f7b83d;
     border-radius: 0 50px 50px 0;
-    background: #f9f9f9;
+    /* background: #f9f9f9; */
 }
 
 .main_recipe .right .r_img img {
@@ -314,4 +329,85 @@ html {
     font-size: 16px;
     font-weight: 300;
     color: #222;
+}
+
+.footer {
+    background: #f9f9f9;
+}
+
+.footer .f_top {
+    padding: 25px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+}
+
+.footer .f_top .customer {
+    display: flex;
+    gap: 30px;
+}
+
+.footer .f_top .customer>li {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.footer .f_top .sns {
+    display: flex;
+    gap: 15px;
+}
+
+.footer .f_top .sns i {
+    padding: 14px;
+    font-size: 20px;
+    font-weight: 500;
+    color: #fff;
+}
+
+.footer .f_top .sns .face {
+    background: #369;
+    border-radius: 10px;
+}
+
+.footer .f_top .sns .insta {
+    background: #ee4e51;
+    border-radius: 10px;
+}
+
+.footer .f_bottom {
+    padding: 40px 0;
+}
+
+.footer .f_bottom address {
+    margin: 0 0 15px 0;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.footer .f_bottom .company {
+    display: flex;
+    margin: 0 0 5px 0;
+    gap: 20px;
+}
+
+.footer .f_bottom .company>li {
+    font-size: 14px;
+    font-weight: 300;
+}
+
+.footer .f_bottom .tell {
+    display: flex;
+    gap: 20px;
+    margin: 0 0 10px 0;
+}
+
+.footer .f_bottom .tell>li {
+    font-size: 14px;
+    font-weight: 300;
+}
+
+.footer .f_bottom span {
+    font-size: 13px;
+    font-weight: 300;
 }

@@ -1,18 +1,3 @@
-const docuE = document.documentElement;
-const newCursor = document.getElementById("circularCursor");
-let posX = 0;
-let posY = 0;
-
-document.addEventListener('DOMcontentLoaded', () => {
-    document.body.onmusemove = function(e) {
-    posX = e.clientX + "px";
-    posY = e.clientY + "px";
-
-    newCursor.style.left = posX;
-    newCursor.style.top = posY;
-}
-});
-
 $(function () {
     $('.e_slide').slick({
         arrows: false,
