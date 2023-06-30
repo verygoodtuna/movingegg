@@ -375,6 +375,10 @@
     background: #f9f9f9;
 }
 
+.footer .inner {
+    position: relative;
+}
+
 .footer .f_top {
     padding: 25px 0 20px 0;
     display: flex;
@@ -483,4 +487,21 @@
     font-size: 13px;
     font-weight: 300;
     color: #808080;
+}
+
+.footer .f_bb {
+    background: #fff;
+    padding: 15px 0;
+}
+
+.footer .f_bb .inner{
+    display: flex;
+    justify-content: space-between;
+    /* gap: 50px; */
+}
+
+.footer .f_logo {
+    position: absolute;
+    bottom: 60px;
+    right: 20px;
 }
