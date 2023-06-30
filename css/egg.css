@@ -32,10 +32,18 @@
     height: 100px;
 }
 
-.header .nav>ul>li>a {
+.header .nav>ul>li {
     font-size: 20px;
     font-weight: 500;
     color: #222;
+}
+
+.header .nav>ul>li span {
+    color: #f7b83d;
+}
+
+.header .nav>ul>li:hover {
+    color: #f7b83d;
 }
 
 .header .nav>ul>li .lnb {
@@ -76,8 +84,8 @@
 }
 
 .header .nav>ul>li .lnb>li>a {
-    font-size: 14px;
-    font-weight: 400;
+    font-size: 15px;
+    font-weight: 300;
     color: #fff;
     line-height: 26px;
 }
@@ -103,12 +111,43 @@
 }
 
 .main_egg .e_slide .itm02 {
-    background: url(../imges/mv02.png)no-repeat left bottom /cover;
+    background: url(../imges/nmv02.png)no-repeat left bottom /cover;
+    position: relative;
 }
 
 .main_egg .e_slide .itm03 {
     background: url(../imges/mv03.png)no-repeat center center/cover;
 }
+
+.main_egg .e_slide .itm02 .txt {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.main_egg .e_slide .itm02 .txt span {
+    display: block;
+    font-size: 30px;
+    font-weight: 300;
+    color: #fff;
+    margin: 0 0 15px 0;
+    text-align: center;
+    text-shadow: 0 0 8px #353535;
+}
+
+.main_egg .e_slide .itm02 .txt strong {
+    font-size: 90px;
+    font-weight: 700;
+    color: #fff;
+    text-align: center;
+    text-shadow: 0 0 8px #979797;
+}
+
+.main_egg .e_slide .itm02 .txt small {
+    color: #f7b83d;
+}
+
 
 .main_egg .slide_btn {
     position: absolute;
@@ -119,7 +158,7 @@
    
     display: flex;
     justify-content: space-between;
-    max-width: 1560px;
+    max-width: 1550px;
     width: 100%;
     /* padding: 0 15px; */
 }
@@ -291,24 +330,25 @@
     font-size: 40px;
     font-weight: 700;
     line-height: 46px;
-    margin: 0 0 100px 0;
+    margin: 0 0 80px 0;
     white-space: nowrap;
     color: #222;
 }
 
 .main_recipe .right .r_img .txt small {
-    font-size: 14px;
+    font-size: 12px;
     font-weight: 400;
-    color: #a8a8a8;
     margin: 0 0 0 auto;
-    border: 1px solid #a8a8a8;
-    padding: 10px 20px;
+    padding: 12px 22px;
     border-radius: 25px;
+    background: #f7b83d;
+    border: 1px solid transparent;
+    color: #fff;
 }
 
 .main_recipe .right .r_btn {
     position: absolute;
-    top: 70%;
+    top: 68%;
     left: 53%;
     transform: translate(0, 0);
 
@@ -320,14 +360,14 @@
     content: "";
     position: absolute;
     left: 49%;
-    background: #ddd;
+    background: #eeeeee;
     height: 15px;
     width: 2px;
 }
 
 .main_recipe .right .r_btn i {
     font-size: 16px;
-    font-weight: 300;
+    font-weight: 500;
     color: #222;
 }
 
@@ -336,11 +376,11 @@
 }
 
 .footer .f_top {
-    padding: 25px 0;
+    padding: 25px 0 20px 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 1px solid #ddd;
+    border-bottom: 1px solid #e6e6e6;
 }
 
 .footer .f_top .customer {
@@ -349,17 +389,18 @@
 }
 
 .footer .f_top .customer>li {
-    font-size: 16px;
-    font-weight: 500;
+    font-size: 15px;
+    font-weight: 400;
+    color: #808080;
 }
 
 .footer .f_top .sns {
     display: flex;
-    gap: 15px;
+    gap: 10px;
 }
 
 .footer .f_top .sns i {
-    padding: 14px;
+    padding: 10px;
     font-size: 20px;
     font-weight: 500;
     color: #fff;
@@ -367,22 +408,23 @@
 
 .footer .f_top .sns .face {
     background: #369;
-    border-radius: 10px;
+    border-radius: 50%;
 }
 
 .footer .f_top .sns .insta {
     background: #ee4e51;
-    border-radius: 10px;
+    border-radius: 50%;
 }
 
 .footer .f_bottom {
-    padding: 40px 0;
+    padding: 30px 0 40px 0;
 }
 
 .footer .f_bottom address {
     margin: 0 0 15px 0;
-    font-size: 16px;
-    font-weight: 400;
+    font-size: 14px;
+    font-weight: 300;
+    color: #808080;
 }
 
 .footer .f_bottom .company {
@@ -394,6 +436,21 @@
 .footer .f_bottom .company>li {
     font-size: 14px;
     font-weight: 300;
+    color: #808080;
+
+    position: relative;
+}
+
+.footer .f_bottom .company>li~li::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: -10px;
+    transform: translate(0, -50%);
+
+    width: 1px;
+    height: 10px;
+    background: #ddd;
 }
 
 .footer .f_bottom .tell {
@@ -405,9 +462,25 @@
 .footer .f_bottom .tell>li {
     font-size: 14px;
     font-weight: 300;
+    color: #808080;
+
+    position: relative;
+}
+
+.footer .f_bottom .tell>li~li::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: -10px;
+    transform: translate(0, -50%);
+
+    width: 1px;
+    height: 10px;
+    background: #ddd;
 }
 
 .footer .f_bottom span {
     font-size: 13px;
     font-weight: 300;
+    color: #808080;
 }
