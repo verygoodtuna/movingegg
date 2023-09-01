@@ -70,9 +70,7 @@ $(function () {
               breakpoint: 768,
               settings: {
                 arrows: false,
-                centerMode: false,
-                centerMode: true,
-                slidesToShow: 3,
+                slidesToShow: 4,
               }
             },
         ]
@@ -81,6 +79,8 @@ $(function () {
     $('.r_slide').slick({
         arrows: false,
         fade: true,
+        slidesToShow: 1,
+        infinite: true,
     })
 
     
